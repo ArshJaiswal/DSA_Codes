@@ -1,0 +1,48 @@
+--PSEUDOCODE
+Pseudocode is a simple, human-readable way of describing how a computer program 
+or algorithm works — without using the exact syntax of a real programming language.
+Pseudocode is an informal way of writing the steps of an algorithm using simple 
+English-like statements mixed with programming logic.
+It helps programmers plan logic before writing actual code.
+
+
+
+---Reason behind the return 0 in int main()
+main() is declared as:
+int main()
+The int means the function must return an integer value to the operating system.
+return 0;
+means:
+"The program finished successfully."
+Example
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Hello";
+    return 0;
+}
+Here 0 indicates success.
+
+
+IMPORTANT
+****Suppose the return type is vector and we have created a vector to store the output and 
+return it then the space complexity is still O(1) because the output array is required to 
+return the answer. Space complexity counts only additional auxiliary space beyond the output.
+
+
+//Input Problem
+#include<iostream>
+using namespace std;
+int main(){
+    int v,e;
+    cin>>e>>v;           //Input is 5 6
+    cout<<v<<" "<<e;     //But it stores 5 in v and 6 in e
+    return 0;
+}
+
+
+| Range  | Meaning                     |
+| ------ | --------------------------- |
+| 48–57  | Digits (`0`–`9`)            |
+| 65–90  | Uppercase letters (`A`–`Z`) |
+| 97–122 | Lowercase letters (`a`–`z`) |

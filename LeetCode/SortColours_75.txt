@@ -1,0 +1,26 @@
+*******Dutch National Flag Algorithm                       
+The Dutch National Flag Algorithm is an efficient algorithm used to sort an array containing only:
+0s, 1s, and 2s
+in:
+One pass
+O(n) time
+O(1) extra space
+
+It was proposed by Edsger W. Dijkstra.
+
+---Main Idea
+Divide the array into 3 regions:
+[0s | 1s | unknown | 2s]
+
+We use 3 pointers:
+low → where next 0 should go
+mid → current element
+high → where next 2 should go
+
+
+| Index Range       | Contains                  |
+| ----------------- | ------------------------- |
+| `0` to `low-1`    | all `0`s                  |
+| `low` to `mid-1`  | all `1`s                  |
+| `mid` to `high`   | unsorted/unknown elements |
+| `high+1` to `n-1` | all `2`s                  |

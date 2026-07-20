@@ -1,0 +1,24 @@
+***What is Subarray?
+A subarray is a continuous part of an array.
+
+***Maximum No Of Subarray=n(n+1)/2
+
+***The brute force approach means solving a problem in the most 
+straightforward (try everything) way, without optimization.
+👉 In simple words:
+Check all possibilities and pick the correct/best one.
+
+**Maximum Subarray Sum Optimal Solution Using Kadane's Algorithm(It is part of DP)
+~What is Kadane's Algorithm?
+--Kadane’s Algorithm is an efficient method to find the maximum sum of a contiguous subarray in an array.
+👉 It improves the brute force approach from O(n²) / O(n³) to : 🚀 O(n) time complexity
+
+🧠 Intuition (Simple Words)
+If the current sum becomes negative, it’s useless → reset it
+Keep track of the maximum sum seen so far
+
+
+🧠 Edge Case / Corner Case — Definition
+An edge case (or corner case) is an input that lies at the extreme boundaries or unusual conditions of a problem where code is more likely to break or behave incorrectly.
+👉 In simple words:
+Special cases that are rare but must be handled correctly

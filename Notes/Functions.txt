@@ -1,0 +1,14 @@
+In standard C++ you cannot define a function inside main() (or inside any other function).
+🔹 Why?
+C++ does not support nested function definitions.
+All functions must be defined:
+Globally, or
+Inside a class/struct
+
+
+| Thing    | Convention | Example       |
+| -------- | ---------- | ------------- |
+| Function | camelCase  | `printData()` |
+| Variable | camelCase  | `totalMarks`  |
+| Class    | PascalCase | `StudentData` |
+| Constant | UPPER_CASE | `MAX_SIZE`    |

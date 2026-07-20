@@ -1,0 +1,22 @@
+**What is STL?
+STL (Standard Template Library) is a powerful part of the C++ Standard
+Library that provides ready-made data structures and algorithms.
+
+**Main Components of STL
+A.Containers(store data)
+--These are data structures:
+1)vector → dynamic array
+2)list → doubly linked list
+3)deque → double-ended queue
+4)set → unique sorted elements
+5)map → key-value pairs
+
+B.Algorithms(operations on data)
+
+C.Iterators(like pointers)
+
+**Why STL is important
+✔ Saves time
+✔ Reduces coding effort
+✔ Optimized and efficient
+✔ Widely used in interviews & competitive programming

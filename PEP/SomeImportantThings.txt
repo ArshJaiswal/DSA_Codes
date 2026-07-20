@@ -1,0 +1,23 @@
+----Constraint----
+10^3 or 4             Two nested loop
+10^4 or 5 or 6        Sorting 
+10^9                  Linear
+1<=n<=2^31-1          O(n)
+1<=n<=25              Recursion or Backtracking
+
+
+Chat Gpt
+n <= 20          -> O(2^n), Backtracking
+n <= 100         -> O(n^3)
+n <= 1000        -> O(n^2)
+n <= 10^5        -> O(n log n)
+n <= 10^7        -> O(n)
+n <= 10^18       -> O(log n)
+
+
+
+L- Lusha 
+
+
+Max sum subarray of size k
+

@@ -1,0 +1,94 @@
+---------------Time & Space Complexity--------------------
+🔷 1. What is Time Complexity?
+Time complexity tells you how the running time grows with input size (n).
+
+👉 It does NOT measure actual seconds.
+👉 It measures number of operations.
+
+🔷 2. What is Space Complexity?
+Space complexity tells you how much extra memory your algorithm uses.
+It includes:
+Variables
+Data structures
+Function calls (recursion stack)
+
+
+
+****In space complexity, we mainly count the extra memory used by the algorithm, called auxiliary space.
+FINAL RULE
+---In space complexity:
+Count memory that grows with n
+Ignore fixed-size variables like loop counters
+
+So loop variables like i, j are considered constant auxiliary space → O(1)
+
+
+
+Notations--
+1. Big-O Notation O — Upper Bound
+Represents the worst-case scenario
+Tells the maximum time an algorithm can take
+
+2. Omega Notation Ω — Lower Bound
+Represents the best-case scenario
+Minimum time required
+
+3. Theta Notation Θ — Tight Bound
+Represents the average or exact bound
+When upper and lower bounds are same 
+
+🔹 Loose Bound
+A loose bound is a bound that is correct but not the most precise.
+->It gives a limit, but not the closest one
+->Usually refers to Big-O (upper bound) that may overestimate
+Example:
+
+If an algorithm takes:
+T(n)=n
+You can say:
+
+O(n) ✅ (tight)
+O(n^2) ✅ (also correct, but loose)
+O(n^3) ✅ (even looser)
+👉 All are valid upper bounds,
+but:O(n2),O(n3) are loose bounds because they are not the closest.
+
+
+🔹 Tight Bound
+A tight bound is the most accurate bound.
+->It gives the exact growth rate
+->Usually expressed using Theta Θ
+Example:
+If: T(n)=3n+5
+Then:
+T(n)=Θ(n)
+
+👉 This is tight because:
+It’s both upper and lower bound
+No unnecessary overestimation
+
+🔥 Key Difference
+| Concept  | Loose Bound             | Tight Bound          |
+| -------- | ----------------------- | -------------------- |
+| Accuracy | Less accurate           | Most accurate        |
+| Example  | ( O(n^2) ) for linear   | ( Theta(n) )         |
+| Meaning  | Just a safe limit       | Exact growth rate    |
+| Usage    | Big-O (sometimes loose) | Theta (always tight) |
+
+
+-------Order of Common Time Complexities-------
+O(1)<O(logn)<O(n)<O(nlogn)<O(n^2)<O(n^3)<O(2^n)<O(n!)
+
+| Complexity   | Name         | Speed                |
+| ------------ | ------------ | -------------------- |
+| (O(1))       | Constant     | Fastest              |
+| (O(log n))   | Logarithmic  | Very Fast            |
+| (O(n))       | Linear       | Good                 |
+| (O(nlog n))  | Linearithmic | Efficient            |
+| (O(n^2))     | Quadratic    | Slow for large input |
+| (O(n^3))     | Cubic        | Very Slow            |
+| (O(2^n))     | Exponential  | Extremely Slow       |
+| (O(n!))      | Factorial    | Worst                |
+
+
+

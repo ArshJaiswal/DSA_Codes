@@ -1,0 +1,67 @@
+Vector--
+A vector in C++ is a dynamic array from the C++ Standard Library that can grow or shrink automatically.
+
+
+| Term          | Meaning                          |
+| ------------- | -------------------------------- |
+| Class         | What a vector actually is in C++ |
+| Dynamic Array | How it behaves                   |
+
+
+Static VS Dynamic Allocation
+1)Static Allocation
+Memory is allocated at compile time
+Characteristics
+1.Size is fixed
+2.Memory allocated in stack
+3.Faster access
+4.Cannot change size later
+
+
+2)Dynamic Allocation
+Memory is allocated at runtime
+Characteristics
+1.Size is flexible
+2.Memory allocated in heap
+3.Can change size (manually)
+4.Requires delete to free memory
+
+**IMPORTANT**
+👉 If capacity is full, then:
+1.A new memory block is allocated (usually larger, often ~2×)
+2.All existing elements are copied/moved to new memory
+3.The new element is added
+4.Old memory is deallocated
+
+
+
+*****Compile Time
+The time when your code is being checked and converted into machine code by the compiler before execution.
+
+Example:
+int a = "hello";
+This gives a compile-time error because "hello" cannot be stored in an integer.
+
+So:
+Happens before running
+Compiler checks syntax and type mistakes
+
+*****Runtime
+The time when the program is actually running after successful compilation.
+
+Example:
+int a = 5;
+int b = 0;
+cout << a / b;
+This may cause a runtime error because division by zero happens while the program runs.
+
+So:
+Happens during execution
+Errors occur while program is running
+
+
+| Compile Time        | Runtime                |
+| ------------------- | ---------------------- |
+| Before execution    | During execution       |
+| Checked by compiler | Happens while running  |
+| Syntax/type errors  | Logical/runtime errors |

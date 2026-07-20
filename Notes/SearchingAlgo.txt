@@ -1,0 +1,14 @@
+***Intuition: In an algorithm, intuition means the basic idea or thinking behind how the algorithm works.
+
+**Linear Search 
+Linear search is the simplest searching technique where you check elements one by one from start to end until you find the target.
+👉 No sorting required
+👉 Works on any array/vector
+
+**Binary Search 
+Binary search is a fast searching technique used on a sorted array.
+Instead of checking every element, it repeatedly divides the array into halves.
+👉 Time Complexity: O(log n) (very efficient)
+
+**Practical Implimentation
+1.Finding Word in a Dictionary

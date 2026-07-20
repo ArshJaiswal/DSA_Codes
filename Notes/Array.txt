@@ -1,0 +1,87 @@
+Data Structure--
+A data structure is a systematic way of organizing, storing, and managing 
+data so that it can be used efficiently.
+(along with the operations that can be performed on it efficiently)
+A data structure is a way of organizing and storing data in a computer so 
+that it can be accessed and modified efficiently.
+
+Algorithms--
+A finite, step-by-step procedure or set of instructions used to solve a 
+specific problem or perform a task.
+
+Array--
+A linear data structure that stores a collection of elements of the same 
+data type in contiguous memory locations.
+
+Key Features--
+1-Same data type (all elements must be similar)
+2-Contiguous memory (stored next to each other)
+3-Indexed access (each element has an index)
+4-Fixed size (size defined at declaration)
+
+
+🔹 Common data types and their sizes
+
+Data Type	      Size (in bytes)	        Description
+char	          1 byte	                Stores a single character
+int	              4 bytes	                Stores integers
+float	          4 bytes	                Stores decimal numbers
+double	          8 bytes	                Stores large decimal numbers
+bool	          1 byte	                Stores true/false
+short int	      2 bytes	                Smaller integer
+long int	      4 or 8 bytes	            Larger integer
+long long int	  8 bytes	                Very large integer
+
+
+1)Primitive Data Types
+These are basic, built-in data types that store single values.
+
+💡 Examples in C++
+1.int → integers
+2.float, double → decimal numbers
+3.char → single character
+4.bool → true/false
+
+2)Non-Primitive Data Types
+These are derived or complex data types that can store multiple values or collections.
+
+Types of Non-Primitive Data Types
+1.Linear Data Structures
+Elements are arranged in sequence
+a.Array
+b.Linked List
+c.Stack
+d.Queue
+
+2.Non-Linear Data Structures
+Elements are not in sequence
+a.Tree
+b.Graph
+
+
+Note: Arrays in C++ are implicitly passed by reference.
+
+***To sort an array
+sort(arr,arr+n);    
+Arguments explained
+arr → starting address of the array
+arr + n → address just after the last element                      
+
+
+---Why can't we use foreach loop in function in which the array is passed?
+Because when an array is passed to a function in C++, it becomes a pointer, not a complete array.
+A for-each loop needs the full array size to know how many elements to iterate over.
+So this works in main():
+int arr[5]={1,2,3,4,5};
+for(int x : arr){
+    cout << x << " ";
+}
+because the compiler knows the array size is 5.
+
+But inside a function:
+void fun(int arr[]){
+    for(int x : arr){
+        cout << x;
+    }
+}
+it gives an error because arr is treated as a pointer and pointers do not store array size.
