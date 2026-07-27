@@ -118,3 +118,86 @@
 // }
 
 //Hybrid is the combination of the above 4
+
+
+// Use Of This Keyword
+// #include<iostream>
+// using namespace std;
+// class Student{
+//     public:
+//     string name="Arsh Jaiswal";
+//     int reg_no=12310191;
+//     void set(string name,int reg_no){
+//         // this->name=name;
+//         // this->reg_no=reg_no;
+//         name=name;
+//         reg_no=reg_no;
+//     }
+//     void get(){
+//         cout<<name<<endl<<reg_no;
+//     }
+// };
+// int main(){
+//     Student ob;
+//     ob.set("Arsh",12310111);
+//     ob.get();
+//     return 0;
+// }
+
+//OVERLOADING
+//Function Overloading
+// #include<iostream>
+// using namespace std;
+// void sum(int a,int b){
+//     cout<<a+b<<endl;
+// }
+// void sum(int a,int b,int c){
+//     cout<<a+b+c<<endl;
+// }
+// int main(){
+//     sum(1,2,3);
+//     sum(1,2);
+//     return 0;
+// }
+
+//Method Overloading
+// #include<iostream>
+// using namespace std;
+// class Parent{
+//     public:
+//     void sum(int a,int b){
+//         cout<<a+b<<endl;
+//     }
+//     void sum(int a,int b,int c){
+//         cout<<a+b+c<<endl;
+//     }
+// };
+// int main(){
+//     Parent ob;
+//     ob.sum(2,3,10);
+//     ob.sum(1,2);
+//     return 0;
+// }
+
+
+//OVERRIDDING
+#include<iostream>
+using namespace std;
+class Parent{
+    public:
+    void sum(int a,int b){
+        cout<<a+b<<endl;
+    }
+};
+class Child:public Parent{
+    public:
+    void sum(int a,int b){
+        cout<<a+b+10<<endl;
+    }
+};
+int main(){
+    Child ob;
+    ob.sum(2,3);
+    ob.sum(1,2);
+    return 0;
+}
