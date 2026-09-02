@@ -1,0 +1,9 @@
+***Resursion***
+Recursion in Data Structures and Algorithms (DSA) is a programming technique where a 
+function calls itself to solve a problem by breaking it into smaller, similar subproblems.
+
+--Every recursive function has two essential parts:
+1) Base Case – The condition that stops the recursion.
+2) Recursive Case – The part where the function calls itself with a smaller or simpler input.
+
+**Almost any problem that can be solved using a loop can also be solved using recursion, but recursion is not always the best choice.

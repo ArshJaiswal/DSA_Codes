@@ -357,3 +357,37 @@
 //     return 0;
 // }
 
+
+//Rotate Array
+
+//First Method
+// #include<iostream>
+// using namespace std;
+// void rotate_array(int arr[],int k,int n){
+//     k=k%n;
+//     while(k--){
+//         int temp=arr[0];
+//         for(int j=0;j<n;j++){
+//             if(j==(n-1)){
+//                 int curr=arr[0];
+//                 arr[0]=temp;
+//                 temp=curr;
+//             }else{
+//                 int curr=arr[j+1];
+//                 arr[j+1]=temp;
+//                 temp=curr;
+//             }
+//         }
+//     }
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+// int main(){
+//     int arr[6]={1,2,3,4,5,6};
+//     int k=3;
+//     int n=6;  //size of array
+//     rotate_array(arr,k,n);
+//     return 0;
+// }
+

@@ -46,3 +46,24 @@ int main(){
 | 48–57  | Digits (`0`–`9`)            |
 | 65–90  | Uppercase letters (`A`–`Z`) |
 | 97–122 | Lowercase letters (`a`–`z`) |
+
+
+
+***CALL STACK
+--The call stack is a special area of memory that keeps track of function calls while your program is running.
+--Think of it like a stack of plates: the last function called is the first one to finish.
+Call stack
+
+┌─────────┐
+│    C()  │  ← currently executing
+├─────────┤
+│    B()  │
+├─────────┤
+│    A()  │
+├─────────┤
+│  main() │
+└─────────┘
+Call stack = memory structure that stores information about active function calls.
+
+
+Some Things Regarding Long Long and int
