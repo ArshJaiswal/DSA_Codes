@@ -364,6 +364,7 @@
 // #include<iostream>
 // using namespace std;
 // void rotate_array(int arr[],int k,int n){
+//     if(n==0)return;
 //     k=k%n;
 //     while(k--){
 //         int temp=arr[0];
@@ -379,15 +380,63 @@
 //             }
 //         }
 //     }
-//     for(int i=0;i<n;i++){
-//         cout<<arr[i]<<" ";
-//     }
 // }
 // int main(){
 //     int arr[6]={1,2,3,4,5,6};
-//     int k=3;
+//     int k=1;
 //     int n=6;  //size of array
 //     rotate_array(arr,k,n);
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//     }
 //     return 0;
 // }
 
+//Second Method
+// #include<iostream>
+// #include<algorithm>
+// using namespace std;
+// void rotate(int arr[],int k,int n){
+//     if(n==0)return;
+//     k=k%n;
+//     reverse(arr+n-k,arr+n);
+//     reverse(arr,arr+n-k);
+//     reverse(arr,arr+n);
+// }
+// int main(){
+//     int arr[6]={1,2,3,4,5,6};
+//     int k=2;
+//     int n=6;
+//     rotate(arr,k,n);
+//     for(int x:arr){
+//         cout<<x<<" ";
+//     }
+//     return 0;
+// }
+
+//Sort According to Frequency
+#include<iostream>
+#include<map>
+#include<algorithm>
+using namespace std;
+void result(int arr[],int n){
+    map<int,int>m;
+    for(int i=0;i<n;i++){
+        m[arr[i]]++;
+    }
+    sort(arr,arr+n,[&](int a,int b){
+        if(m[a]!=m[b]){
+            return m[a]>m[b];
+        }
+        return a>b;
+    });
+}
+int main(){
+    int arr[9]={-1,1,-6,4,5,-6,1,4,1};
+    int n=9;
+    result(arr,n);
+    for(int x:arr){
+        cout<<x<<" ";
+    }
+    return 0;
+}
