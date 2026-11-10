@@ -1,6 +1,40 @@
 // #include<iostream>
 // using namespace std;
 // int main(){
+//     int a=3;
+//     int b=7;
+
+//     //FIRST METHOD
+//     // a=a+b;
+//     // b=a-b;
+//     // a=a-b;
+
+//     //SECOND METHOD
+//     // a=a^b;
+//     // b=a^b;
+//     // a=a^b;
+
+//     //THIRD METHOD
+//     // swap(a,b);
+
+//     //FOURTH METHOD
+//     // a=a*b;
+//     // b=a/b;
+//     // a=a/b;
+
+//     //FIFTH METHOD
+//     // int temp=a;
+//     // a=b;
+//     // b=temp;
+
+//     cout<<a<<" "<<b;
+//     return 0;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// int main(){
 //     int marks[6]={11,29,32,43,15,10};
 //     for(int i=0;i<6;i++){
 //         cout<<marks[i]<<endl;
@@ -415,20 +449,48 @@
 // }
 
 //Sort According to Frequency
+// #include<iostream>
+// #include<map>
+// #include<algorithm>
+// using namespace std;
+// void result(int arr[],int n){
+//     map<int,int>m;
+//     for(int i=0;i<n;i++){
+//         m[arr[i]]++;
+//     }
+//     sort(arr,arr+n,[&](int a,int b){
+//         if(m[a]!=m[b]){
+//             return m[a]>m[b];
+//         }
+//         return a>b;
+//     });
+// }
+// int main(){
+//     int arr[9]={-1,1,-6,4,5,-6,1,4,1};
+//     int n=9;
+//     result(arr,n);
+//     for(int x:arr){
+//         cout<<x<<" ";
+//     }
+//     return 0;
+// }
+
+
 #include<iostream>
-#include<map>
+#include<unordered_map>
 #include<algorithm>
 using namespace std;
 void result(int arr[],int n){
-    map<int,int>m;
+    unordered_map<int,int> m;
     for(int i=0;i<n;i++){
         m[arr[i]]++;
     }
-    sort(arr,arr+n,[&](int a,int b){
-        if(m[a]!=m[b]){
-            return m[a]>m[b];
-        }
-        return a>b;
+    stable_sort(arr,arr+n,[&](int a,int b){
+        // if(m[a]!=m[b]){
+        //     return m[a]>m[b];
+        // }
+        // return a>b;
+        return m[a]>m[b];
     });
 }
 int main(){

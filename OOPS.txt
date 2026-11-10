@@ -1,0 +1,19 @@
+---Remember these three things:
+1. Non-static data members → Separate memory for every object.
+2. Member functions → Generally one shared copy of code.
+3. Static data members → One shared variable for the entire class.
+
+---What is the difference between these two?
+class B : public A {};
+
+class B : virtual public A {};
+- public A: Normal inheritance. Each inheritance path can create a separate A subobject.
+- virtual public A: Virtual inheritance. The most-derived object shares one A subobject across the virtual inheritance paths.
+
+
+---What should you remember?
+Concept	Meaning
+Multiple inheritance	A class inherits from multiple classes
+Diamond problem     	Same base class inherited through multiple paths
+Virtual inheritance	    Prevents duplicate shared base-class subobjects
+virtual public A	    Makes A a virtual base class
