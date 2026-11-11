@@ -66,3 +66,35 @@
 // }
 
 
+//Diamond Problem
+#include<iostream>
+using namespace std;
+class GrandParent{
+    public:
+    void get1(){
+        cout<<"GrandParent";
+    }
+};
+class Father : virtual public GrandParent{
+    public:
+    void get2(){
+        cout<<"Father";
+    }
+};
+class Mother : virtual public GrandParent{
+    public:
+    void get3(){
+        cout<<"Mother";
+    }
+};
+class Son : public Father, public Mother{
+    public:
+    void get4(){
+        cout<<"Son";
+    }
+};
+int main(){
+    Son ob;
+    ob.get1();
+    return 0; 
+}
