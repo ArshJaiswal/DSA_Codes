@@ -67,34 +67,90 @@
 
 
 //Diamond Problem
+// #include<iostream>
+// using namespace std;
+// class GrandParent{
+//     public:
+//     void get1(){
+//         cout<<"GrandParent";
+//     }
+// };
+// class Father : virtual public GrandParent{
+//     public:
+//     void get2(){
+//         cout<<"Father";
+//     }
+// };
+// class Mother : virtual public GrandParent{
+//     public:
+//     void get3(){
+//         cout<<"Mother";
+//     }
+// };
+// class Son : public Father, public Mother{
+//     public:
+//     void get4(){
+//         cout<<"Son";
+//     }
+// };
+// int main(){
+//     Son ob;
+//     ob.get1();
+//     return 0; 
+// }
+
+// #include<iostream>
+// using namespace std;
+// class Parent{
+//     public:
+//     virtual void get(){
+//         cout<<"Parent";
+//     }
+// };
+// class Son:public Parent{
+//     void get(){
+//         cout<<"Son";
+//     }
+// };
+// int main(){
+//     Parent* ptr;
+//     Son ob;
+//     ptr=&ob;
+//     ptr->get();
+//     return 0;
+// }
+//Work of Virtual Keyword?
+//When this function is called through a base-class pointer or reference, 
+//select the function according to the actual object type at runtime, rather 
+//than simply using the pointer's type.
+
 #include<iostream>
 using namespace std;
-class GrandParent{
+class Student{
     public:
-    void get1(){
-        cout<<"GrandParent";
+    string name;
+    Student(){
+        name="Arsh Jaiswal";
+        cout<<"Default Constructor Called"<<endl;
     }
-};
-class Father : virtual public GrandParent{
-    public:
-    void get2(){
-        cout<<"Father";
+    Student(string str){
+        name=str;
+        cout<<"Parameterized Constructor Called"<<endl;
     }
-};
-class Mother : virtual public GrandParent{
-    public:
-    void get3(){
-        cout<<"Mother";
+    Student(const Student &s){
+        name=s.name;
+        cout<<"Copy Constructor Called"<<endl;
     }
-};
-class Son : public Father, public Mother{
-    public:
-    void get4(){
-        cout<<"Son";
+    ~Student(){
+        cout<<"Destructor Called"<<endl;
     }
 };
 int main(){
-    Son ob;
-    ob.get1();
-    return 0; 
+    Student ob;
+    Student ob2("Arsh");
+    cout<<ob.name<<endl;
+    cout<<ob2.name<<endl;
+    Student ob3(ob2);
+    cout<<ob3.name<<endl;
+    return 0;
 }

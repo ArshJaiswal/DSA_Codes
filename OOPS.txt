@@ -17,3 +17,68 @@ Multiple inheritance	A class inherits from multiple classes
 Diamond problem     	Same base class inherited through multiple paths
 Virtual inheritance	    Prevents duplicate shared base-class subobjects
 virtual public A	    Makes A a virtual base class
+
+---Important Terms
+Static binding: Function call is resolved at compile time.
+Dynamic binding: Function call is resolved at runtime.
+Compile-time polymorphism: Achieved mainly through function and operator overloading.
+Runtime polymorphism: Achieved through function overriding using virtual functions.
+
+
+---Important
+The virtual keyword is the key to achieving runtime polymorphism in C++.
+Its main job is to tell the compiler:
+"When this function is called through a base-class pointer or reference, 
+select the function according to the actual object type at runtime, rather 
+than simply using the pointer's type."
+
+---Interview question: In what order are constructors and destructors called in inheritance?
+- Constructor: Parent first, then child.
+- Destructor: Child first, then parent.
+
+---Virtual Functions
+A virtual function is a member function declared using the virtual keyword in the base class.
+It allows the derived class implementation to be called through a base-class pointer or reference.
+
+
+---Can constructors be virtual?
+No
+Constructors cannot be virtual in C++.
+Why?
+A constructor is responsible for creating and initializing an object.
+When a constructor executes, the object is still being constructed. Virtual functions, on the other hand, are used to select overridden functions based on the actual object's type at runtime.
+A constructor cannot use virtual dispatch to decide which class's constructor should create the object.
+Remember: The constructor is responsible for object creation and initialization, so it cannot be virtual.
+
+Can destructors be virtual?
+Yes
+Destructors can be virtual.
+In fact, when a class is designed to be used as a polymorphic base class, its destructor should generally be virtual.
+Example
+#include<iostream>
+using namespace std;
+class Parent {
+public:
+    ~Parent() {
+        cout << "Parent Destructor\n";
+    }
+};
+class Son : public Parent {
+public:
+    ~Son() {
+        cout << "Son Destructor\n";
+    }
+};
+int main() {
+    Parent* ptr = new Son();
+    delete ptr;
+    return 0;
+}
+Result Parent Destructor is called instead of son that's why destructor can be virtual as there is need of that in this situation.
+
+
+Class	                                Struct
+1)Default access is private	            1)Default access is public
+2)Default inheritance is private	    2)Default inheritance is public
+3)Supports OOPS features	            3)Also supports OOPS features
+---Both can have constructors, destructors, inheritance, and member functions.
